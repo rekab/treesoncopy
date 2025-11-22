@@ -155,6 +155,39 @@ nav ul li a:hover {
   border-color: var(--color-accent);
 }
 
+/* Sticky Navigation */
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+  background-color: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(124, 179, 66, 0.3);
+  transform: translateY(-100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sticky-nav.visible {
+  transform: translateY(0);
+}
+
+.sticky-nav .nav-container {
+  background-color: transparent;
+  padding: 0.5rem var(--spacing-md);
+}
+
+.sticky-nav nav ul li a {
+  font-size: 0.85rem;
+  padding: 0.3rem 0;
+}
+
+.sticky-nav .nav-center a {
+  font-size: 1.2rem;
+  padding: 0.5rem var(--spacing-md);
+}
+
 /* Main Content */
 main {
   margin-top: var(--nav-height);
@@ -649,6 +682,19 @@ footer {
   .testimonials-grid {
     grid-template-columns: 1fr;
     gap: var(--spacing-xl);
+  }
+
+  .sticky-nav .nav-container {
+    flex-direction: column;
+    padding: 0.5rem var(--spacing-sm);
+  }
+
+  .sticky-nav nav ul li a {
+    font-size: 0.75rem;
+  }
+
+  .sticky-nav .nav-center a {
+    font-size: 1rem;
   }
 }
 

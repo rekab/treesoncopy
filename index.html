@@ -32,6 +32,31 @@
     </div>
   </header>
 
+  <!-- Sticky Navigation (appears on scroll) -->
+  <nav class="sticky-nav" id="stickyNav">
+    <div class="nav-container">
+      <nav class="nav-left">
+        <ul>
+          <li><a href="index.html">TREESON</a></li>
+          <li><a href="#buzz">BUZZ</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#music">MUSIC</a></li>
+        </ul>
+      </nav>
+      <div class="nav-center">
+        <a href="index.html">TREESON</a>
+      </div>
+      <nav class="nav-right">
+        <ul>
+          <li><a href="#creative">CREATIVE</a></li>
+          <li><a href="#cast">DEMO CAST</a></li>
+          <li><a href="#media">MEDIA</a></li>
+          <li><a href="#connect">CONNECT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </nav>
+
   <main>
     <!-- Hero Section -->
     <section class="hero">
@@ -295,5 +320,44 @@
     </div>
     <p>© 2020 TREESON, the Musical. Copyright of G. Victoria Campbell.</p>
   </footer>
+
+  <script>
+    // Sticky navigation scroll behavior
+    const stickyNav = document.getElementById('stickyNav');
+    const hero = document.querySelector('.hero');
+    let lastScrollTop = 0;
+    let hasPassedHero = false;
+
+    function handleScroll() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const heroHeight = hero.offsetHeight;
+
+      // Check if we've scrolled past the hero section
+      if (scrollTop > heroHeight) {
+        if (!hasPassedHero) {
+          // Just passed the hero - slide in
+          hasPassedHero = true;
+          stickyNav.classList.add('visible');
+        }
+      } else {
+        if (hasPassedHero) {
+          // Scrolled back up past the hero - slide out
+          hasPassedHero = false;
+          stickyNav.classList.remove('visible');
+        }
+      }
+
+      lastScrollTop = scrollTop;
+    }
+
+    // Throttle scroll events for better performance
+    let scrollTimeout;
+    window.addEventListener('scroll', function() {
+      if (scrollTimeout) {
+        window.cancelAnimationFrame(scrollTimeout);
+      }
+      scrollTimeout = window.requestAnimationFrame(handleScroll);
+    });
+  </script>
 </body>
 </html>
