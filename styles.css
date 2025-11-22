@@ -1,5 +1,22 @@
 /* TREESON Musical Website - Main Stylesheet */
 
+/* Font Faces */
+@font-face {
+  font-family: 'SomethingWild';
+  src: url('somethingwild-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url('sourcecodepro.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Color Palette */
   --color-bg-primary: #0a0a0a;
@@ -144,8 +161,9 @@ main {
 }
 
 .hero h1 {
+  font-family: 'SomethingWild', cursive;
   font-size: 8rem;
-  font-weight: 300;
+  font-weight: normal;
   letter-spacing: 0.3em;
   margin-bottom: var(--spacing-sm);
   color: #ffffff;
@@ -175,6 +193,7 @@ main {
   background-color: transparent;
   border: 2px solid #ffffff;
   color: #ffffff;
+  font-family: 'Source Code Pro', monospace;
   font-size: 0.9rem;
   font-weight: 500;
   letter-spacing: 0.15em;
