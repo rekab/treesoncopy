@@ -109,6 +109,14 @@ nav {
   background-color: transparent;
 }
 
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: var(--spacing-md);
+  padding: var(--spacing-sm) 0;
+  align-items: center;
+}
+
 .nav-left,
 .nav-right {
   flex: 1;
