@@ -486,6 +486,46 @@ footer {
   color: var(--color-accent);
 }
 
+/* Buzz/Testimonials Section */
+#buzz {
+  background-color: var(--color-bg-primary);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.testimonial {
+  text-align: center;
+}
+
+.quote-mark {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.quote-text {
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+}
+
+.quote-author {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--color-text-primary);
+  text-align: center;
+  line-height: 1.5;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   :root {
@@ -529,6 +569,11 @@ footer {
   
   .cast-grid {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
   }
 }
 
