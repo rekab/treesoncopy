@@ -209,13 +209,27 @@ section {
 .about-content {
   max-width: 900px;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   line-height: 1.8;
   font-weight: 300;
 }
 
 .about-content p {
   margin-bottom: var(--spacing-md);
+}
+
+.about-italic {
+  font-style: italic;
+}
+
+.about-centered {
+  text-align: center;
+  font-style: italic;
+}
+
+.about-content .video-container {
+  max-width: 100%;
+  margin-top: var(--spacing-lg);
 }
 
 /* Music Section */
