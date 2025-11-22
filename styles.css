@@ -97,6 +97,14 @@ header {
   background-color: transparent;
 }
 
+.logo {
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.3em;
+  color: #9ed969;
+  text-transform: uppercase;
+}
+
 nav {
   background-color: transparent;
 }
