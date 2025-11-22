@@ -511,7 +511,7 @@ footer {
 }
 
 .quote-text {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 300;
   line-height: 1.6;
   margin-bottom: var(--spacing-md);
@@ -519,7 +519,7 @@ footer {
 }
 
 .quote-author {
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   font-weight: 300;
   color: var(--color-text-primary);
   text-align: center;
